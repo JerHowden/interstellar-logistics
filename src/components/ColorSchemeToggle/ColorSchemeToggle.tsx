@@ -1,7 +1,9 @@
 import { Button, Group, useMantineColorScheme } from '@mantine/core';
 
 export function ColorSchemeToggle() {
-  const { setColorScheme } = useMantineColorScheme();
+  const { setColorScheme } = useMantineColorScheme({
+    keepTransitions: true,
+  });
 
   return (
     <Group justify="center" mt="xl">

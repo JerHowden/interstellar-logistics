@@ -9,7 +9,9 @@ import { theme } from '../src/theme';
 const channel = addons.getChannel();
 
 function ColorSchemeWrapper({ children }: { children: React.ReactNode }) {
-  const { setColorScheme } = useMantineColorScheme();
+  const { setColorScheme } = useMantineColorScheme({
+    keepTransitions: true,
+  });
   const handleColorScheme = (value: boolean) => setColorScheme(value ? 'dark' : 'light');
 
   useEffect(() => {
