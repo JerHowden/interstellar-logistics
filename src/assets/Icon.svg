@@ -3,7 +3,13 @@
   <defs>
     <style>
       .cls-1 {
-        fill: url(#linear-gradient);
+        fill: url(#linear-gradient-dark-mode);
+      }
+
+      @media (prefers-color-scheme: light) {
+        .cls-1 {
+          fill: url(#linear-gradient-light-mode);
+        }
       }
 
       .cls-1, .cls-2, .cls-3, .cls-4 {
@@ -11,9 +17,15 @@
       }
 
       .cls-2 {
-        fill: #000d2a;
+        fill: #fff;
       }
 
+      @media (prefers-color-scheme: light) {
+        .cls-2 {
+          fill: #000d2a;
+        }
+      }
+      
       .cls-3 {
         fill: #a28aff;
       }
@@ -22,9 +34,13 @@
         fill: #9377ff;
       }
     </style>
-    <linearGradient id="linear-gradient" x1="80" y1="795.7" x2="936.3" y2="316.7" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient-dark-mode" x1="80" y1="795.7" x2="936.3" y2="316.7" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#8464ff"/>
       <stop offset="1" stop-color="#b09bff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-light-mode" x1="80" y1="795.7" x2="936.3" y2="316.7" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6036fe"/>
+      <stop offset="1" stop-color="#8464ff"/>
     </linearGradient>
   </defs>
   <g id="Shape_9" data-name="Shape 9">

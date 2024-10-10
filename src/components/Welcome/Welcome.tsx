@@ -6,7 +6,16 @@ export function Welcome() {
     <>
       <Title className={classes.title} ta="center" mt={100}>
         Welcome to{' '}
-        <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
+        <Text
+          inherit
+          variant="gradient"
+          component="span"
+          gradient={{
+            from: 'var(--mantine-color-blurple-2)',
+            to: 'var(--mantine-color-blurple-3)',
+            deg: 180,
+          }}
+        >
           Mantine
         </Text>
       </Title>

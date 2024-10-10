@@ -18,5 +18,9 @@ export const theme = createTheme({
     blurple,
   },
   primaryColor: 'blurple',
+  primaryShade: {
+    light: 4,
+    dark: 3,
+  },
   defaultRadius: 'md',
 });

@@ -1,0 +1,1 @@
+export { useBlurpleGradient } from './useBlurpleGradient';
