@@ -1,7 +1,7 @@
 {
   "name": "interstellar-logistics",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -25,6 +25,7 @@
     "@mantine/hooks": "^7.13.1",
     "@mantine/modals": "^7.13.1",
     "@mantine/notifications": "^7.13.1",
+    "@tabler/icons-react": "^3.19.0",
     "appwrite": "^16.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
