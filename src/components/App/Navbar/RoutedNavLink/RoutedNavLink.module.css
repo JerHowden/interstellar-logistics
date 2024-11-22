@@ -1,0 +1,14 @@
+.link {
+  padding-left: var(--mantine-spacing-md);
+  padding-right: var(--mantine-spacing-md);
+  border-top-right-radius: var(--mantine-radius-sm);
+  border-bottom-right-radius: var(--mantine-radius-sm);
+  font-size: var(--mantine-font-size-sm);
+  user-select: none;
+  border-left: calc(0.0625rem * var(--mantine-scale)) solid;
+  border-color: var(--mantine-color-default-border);
+
+  &[data-active] {
+    border-color: var(--mantine-primary-color-3);
+  }
+}

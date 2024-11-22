@@ -8,10 +8,9 @@ type NavSectionProps = {
 };
 
 export function NavSection({ title, children }: NavSectionProps) {
-  const gradient = useBlurpleGradient();
   return (
-    <Stack gap="xs">
-      <Text size="xs" fw={700} tt="uppercase" variant="gradient" gradient={gradient}>
+    <Stack gap={0} mx="lg">
+      <Text size="sm" fw={700} tt="uppercase" py="xs">
         {title}
       </Text>
       {children}

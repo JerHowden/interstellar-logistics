@@ -1,4 +1,5 @@
-import { useNavigate } from 'react-router-dom';
+import { useCallback } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {
   AppShell,
   Burger,
@@ -13,6 +14,7 @@ import {
   useMantineColorScheme,
 } from '@mantine/core';
 import { NavSection } from './NavSection';
+import { RoutedNavLink } from './RoutedNavLink';
 import classes from './Navbar.module.css';
 
 type NavbarProps = {
@@ -21,11 +23,12 @@ type NavbarProps = {
 };
 
 export function Navbar({ opened, toggle }: NavbarProps) {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
+  const location = useLocation();
   const colorScheme = useComputedColorScheme();
 
   return (
-    <AppShell.Navbar withBorder={false}>
+    <AppShell.Navbar withBorder>
       <Paper>
         <Stack>
           <Group wrap="nowrap">
@@ -37,7 +40,7 @@ export function Navbar({ opened, toggle }: NavbarProps) {
               title="Close Side Panel"
             />
             <Flex
-              p="md"
+              p="lg"
               onClick={() => navigate('/dashboard', { state: { name: 'Dashboard' } })}
               className={classes.logo}
               title="Dashboard"
@@ -48,69 +51,28 @@ export function Navbar({ opened, toggle }: NavbarProps) {
               />
             </Flex>
           </Group>
-          <Stack>
-            <NavSection title="Product">
-              <NavLink
-                label="Facilities"
-                onClick={() => navigate('/facilities', { state: { name: 'Facilities' } })}
-              />
-              <NavLink
-                label="Employees"
-                onClick={() => navigate('/employees', { state: { name: 'Employees' } })}
-              />
-              <NavLink
-                label="Fleet"
-                onClick={() => navigate('/fleet', { state: { name: 'Fleet' } })}
-              />
+          <Stack className={classes.nav}>
+            <NavSection title="Assets">
+              <RoutedNavLink linkKey="facilities" toggle={toggle} />
+              <RoutedNavLink linkKey="employees" toggle={toggle} />
+              <RoutedNavLink linkKey="fleet" toggle={toggle} />
             </NavSection>
             <NavSection title="Product">
-              <NavLink
-                label="Inventory"
-                onClick={() => navigate('/inventory', { state: { name: 'Inventory' } })}
-              />
-              <NavLink
-                label="Procurement"
-                onClick={() => navigate('/procurement', { state: { name: 'Procurement' } })}
-              >
-                <NavLink
-                  label="Harvesting"
-                  onClick={() =>
-                    navigate('/procurement/harvesting', { state: { name: 'Harvesting' } })
-                  }
-                />
-                <NavLink
-                  label="Processing"
-                  onClick={() =>
-                    navigate('/procurement/processing', { state: { name: 'Processing' } })
-                  }
-                />
-                <NavLink
-                  label="Manufacturing"
-                  onClick={() =>
-                    navigate('/procurement/manufacturing', { state: { name: 'Manufacturing' } })
-                  }
-                />
-              </NavLink>
+              <RoutedNavLink linkKey="procurement" toggle={toggle}>
+                {/* <RoutedNavLink linkKey="harvesting" toggle={toggle} />
+                <RoutedNavLink linkKey="processing" toggle={toggle} />
+                <RoutedNavLink linkKey="manufacturing" toggle={toggle} /> */}
+              </RoutedNavLink>
+              <RoutedNavLink linkKey="inventory" toggle={toggle} />
+              <RoutedNavLink linkKey="deliveries" toggle={toggle} />
             </NavSection>
             <NavSection title="Financial">
-              <NavLink
-                label="Balance Sheet"
-                onClick={() => navigate('/balance-sheet', { state: { name: 'Balance Sheet' } })}
-              />
-              <NavLink
-                label="Contracts"
-                onClick={() => navigate('/contracts', { state: { name: 'Contracts' } })}
-              />
+              <RoutedNavLink linkKey="balanceSheet" toggle={toggle} />
+              <RoutedNavLink linkKey="contracts" toggle={toggle} />
             </NavSection>
             <NavSection title="Company">
-              <NavLink
-                label="Awards"
-                onClick={() => navigate('/awards', { state: { name: 'Awards' } })}
-              />
-              <NavLink
-                label="Statistics"
-                onClick={() => navigate('/statistics', { state: { name: 'Statistics' } })}
-              />
+              <RoutedNavLink linkKey="awards" toggle={toggle} />
+              <RoutedNavLink linkKey="statistics" toggle={toggle} />
             </NavSection>
           </Stack>
         </Stack>
