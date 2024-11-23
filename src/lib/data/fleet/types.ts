@@ -1,3 +1,5 @@
+type Company = '';
+
 type Ship = {
   name: string;
   level: 1 | 2 | 3 | 4 | 5;

@@ -19,6 +19,8 @@ export type MaterialRaw =
   | 'titanium'
   | 'silver'
   | 'phosphorus'
+  | 'nitrogen'
+  | 'sulfur'
   | 'helium-3' // Fusion fuel
   | 'deuterium' // Fusion fuel hydrogen
   | 'tritium' // Fusion fuel hydrogen
@@ -35,9 +37,9 @@ export type MaterialProcessed =
   | 'concrete'
   | 'alloyed metal'
   | 'composite materials'
-  | 'tritium fuel'
+  | 'fusion fuel'
   | 'high-temperature insulators'
-  | 'superconducters'
+  | 'superconductors'
   | 'lithium-ion batteries'
   | 'carbon nanotubes'
   | 'bioreactor materials'
@@ -45,7 +47,7 @@ export type MaterialProcessed =
   | 'water recycling system'
   | 'thermal insulation'
   | 'radiation shielding'
-  | 'diamond-coated drill bits'
+  | 'diamond'
   | 'servo motors'
   | 'precision bearings'
   | 'organic growth medium'
@@ -57,15 +59,15 @@ export type MaterialManufactured =
   | 'fusion reactor'
   | 'life support system'
   | 'energy storage system'
-  | 'solar panel array'
+  | 'solar panel'
   | 'space mining drills'
   | 'robotic arm'
   | 'artificial ecosystem generator';
 
 export type Material = MaterialRaw | MaterialProcessed | MaterialManufactured;
 
-export type ResourceData = {
-  name: Material;
+export type MaterialData = {
+  name: string;
   description: string;
   category: ResourceCategory;
   state: StateOfMatter;

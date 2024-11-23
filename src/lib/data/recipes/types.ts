@@ -1,14 +1,14 @@
 import { Material } from '../resources';
 
 type CraftingMaterials = {
-  name: Material;
+  material: Material;
   amount: number;
 };
 export type MaterialRecipe = {
   key: string;
   inputs: CraftingMaterials[];
   outputs: CraftingMaterials[];
-  type: 'harvesting' | 'processing' | 'manufacturing';
+  type: 'processing' | 'manufacturing';
   level: 1 | 2 | 3 | 4 | 5;
 };
 
