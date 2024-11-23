@@ -15,7 +15,6 @@ export function RoutedNavLink({ linkKey, toggle, children }: RoutedNavLinkProps)
   const location = useLocation();
 
   const linkData = NAV_LINK_MAP[linkKey];
-  console.log({ linkData });
 
   return (
     <NavLink

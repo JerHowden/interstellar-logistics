@@ -22,12 +22,13 @@ const router = createBrowserRouter(
       <Route path="/fleet">
         <Route path=":ship-id" />
       </Route>
-      <Route path="/inventory" />
       <Route path="/procurement">
         <Route path="harvesting" />
         <Route path="processing" />
         <Route path="manufacturing" />
       </Route>
+      <Route path="/inventory" />
+      <Route path="/deliveries" />
       <Route path="/balance-sheet" />
       <Route path="/contracts" />
       {/* separated run awards and user awards but both displayed */}
