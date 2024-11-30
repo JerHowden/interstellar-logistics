@@ -5,7 +5,7 @@ type CraftingMaterials = {
   amount: number;
 };
 export type MaterialRecipe = {
-  key: string;
+  key: Material;
   inputs: CraftingMaterials[];
   outputs: CraftingMaterials[];
   type: 'processing' | 'manufacturing';
@@ -13,13 +13,13 @@ export type MaterialRecipe = {
 };
 
 export type ConstructingRecipe = {
-  key: string;
+  key: Material;
   inputs: CraftingMaterials[];
   level: 1 | 2 | 3 | 4 | 5;
 };
 
 export type ShipbuildingRecipe = {
-  key: string;
+  key: Material;
   inputs: CraftingMaterials[];
   level: 1 | 2 | 3 | 4 | 5;
 };

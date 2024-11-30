@@ -9,60 +9,59 @@ export type ResourceForm = 'raw' | 'processed' | 'manufactured';
 
 export type MaterialRaw =
   | 'aggregate'
-  | 'iron'
-  | 'nickel'
-  | 'copper'
-  | 'rare earth elements'
+  | 'aluminum'
+  | 'antimatter' // Advanced propulsion, energy generation
   | 'boron'
-  | 'lithium'
   | 'carbon' // graphite
-  | 'titanium'
-  | 'silver'
-  | 'phosphorus'
-  | 'nitrogen'
-  | 'sulfur'
-  | 'helium-3' // Fusion fuel
+  | 'copper'
   | 'deuterium' // Fusion fuel hydrogen
+  | 'helium-3' // Fusion fuel
+  | 'iron'
+  | 'lithium'
+  | 'nickel'
+  | 'nitrogen'
+  | 'oxygen'
+  | 'phosphorus'
+  | 'platinum'
+  | 'rare earth elements'
+  | 'silicon'
+  | 'silver'
+  | 'sulfur'
+  | 'thorium' // Nuclear fuel
+  | 'titanium'
   | 'tritium' // Fusion fuel hydrogen
   | 'uranium' // Nuclear fuel
-  | 'thorium' // Nuclear fuel
-  | 'antimatter' // Advanced propulsion, energy generation
-  | 'oxygen'
-  | 'water'
-  | 'aluminum'
-  | 'silicon'
-  | 'platinum';
+  | 'water';
 
 export type MaterialProcessed =
-  | 'concrete'
   | 'alloyed metal'
+  | 'bioreactor materials'
+  | 'carbon nanotubes'
   | 'composite materials'
+  | 'concrete'
+  | 'diamond'
   | 'fusion fuel'
   | 'high-temperature insulators'
-  | 'superconductors'
   | 'lithium-ion batteries'
-  | 'carbon nanotubes'
-  | 'bioreactor materials'
+  | 'oxygen and co2 regulators'
   | 'oxygen generation system'
-  | 'water recycling system'
-  | 'thermal insulation'
-  | 'radiation shielding'
-  | 'diamond'
-  | 'servo motors'
   | 'precision bearings'
-  | 'organic growth medium'
-  | 'oxygen and co2 regulators';
+  | 'radiation shielding'
+  | 'servo motors'
+  | 'solar panel'
+  | 'superconductors'
+  | 'thermal insulation'
+  | 'water recycling system';
 
 export type MaterialManufactured =
-  | 'ftl engine'
-  | 'spacecraft parts'
-  | 'fusion reactor'
-  | 'life support system'
+  | 'artificial ecosystem generator'
   | 'energy storage system'
-  | 'solar panel'
-  | 'space mining drills'
+  | 'fusion reactor'
+  | 'ftl engine'
+  | 'life support system'
   | 'robotic arm'
-  | 'artificial ecosystem generator';
+  | 'diamondium drill'
+  | 'spacecraft parts';
 
 export type Material = MaterialRaw | MaterialProcessed | MaterialManufactured;
 
@@ -73,4 +72,5 @@ export type MaterialData = {
   state: StateOfMatter;
   abundance: Abundance;
   form: ResourceForm;
+  weight: number; // (t)
 };
