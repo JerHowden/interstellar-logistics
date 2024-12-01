@@ -2,7 +2,7 @@ import { Ship } from './types';
 
 const keplerShips: Ship[] = [
   {
-    id: 'KI-001',
+    id: 'KI-1',
     name: 'Kepler Pioneer',
     company: 'Kepler Industries',
     level: 1,
@@ -14,7 +14,7 @@ const keplerShips: Ship[] = [
     maintenanceRate: 1000,
   },
   {
-    id: 'KI-002',
+    id: 'KI-2',
     name: 'Kepler Explorer',
     company: 'Kepler Industries',
     level: 2,
@@ -26,7 +26,7 @@ const keplerShips: Ship[] = [
     maintenanceRate: 1500,
   },
   {
-    id: 'KI-003',
+    id: 'KI-3',
     name: 'Kepler Pathfinder',
     company: 'Kepler Industries',
     level: 3,
@@ -38,7 +38,7 @@ const keplerShips: Ship[] = [
     maintenanceRate: 2000,
   },
   {
-    id: 'KI-004',
+    id: 'KI-4',
     name: 'Kepler Outrider',
     company: 'Kepler Industries',
     level: 4,
@@ -50,7 +50,7 @@ const keplerShips: Ship[] = [
     maintenanceRate: 3000,
   },
   {
-    id: 'KI-005',
+    id: 'KI-5',
     name: 'Kepler Voyager',
     company: 'Kepler Industries',
     level: 5,
@@ -65,7 +65,7 @@ const keplerShips: Ship[] = [
 
 const redshiftShips: Ship[] = [
   {
-    id: 'RD-001',
+    id: 'RD-1',
     name: 'Proton',
     company: 'Redshift Dynamics',
     level: 1,
@@ -77,7 +77,7 @@ const redshiftShips: Ship[] = [
     maintenanceRate: 2000,
   },
   {
-    id: 'RD-002',
+    id: 'RD-2',
     name: 'Neutron',
     company: 'Redshift Dynamics',
     level: 2,
@@ -89,7 +89,7 @@ const redshiftShips: Ship[] = [
     maintenanceRate: 3000,
   },
   {
-    id: 'RD-003',
+    id: 'RD-3',
     name: 'Delta',
     company: 'Redshift Dynamics',
     level: 3,
@@ -101,7 +101,7 @@ const redshiftShips: Ship[] = [
     maintenanceRate: 4000,
   },
   {
-    id: 'RD-004',
+    id: 'RD-4',
     name: 'Lambda',
     company: 'Redshift Dynamics',
     level: 4,
@@ -113,7 +113,7 @@ const redshiftShips: Ship[] = [
     maintenanceRate: 6000,
   },
   {
-    id: 'RD-005',
+    id: 'RD-5',
     name: 'Sigma',
     company: 'Redshift Dynamics',
     level: 5,
@@ -128,7 +128,7 @@ const redshiftShips: Ship[] = [
 
 const titanHaulShips: Ship[] = [
   {
-    id: 'TH-001',
+    id: 'TH-1',
     name: 'Elysium',
     company: 'Titan Haul',
     level: 1,
@@ -140,7 +140,7 @@ const titanHaulShips: Ship[] = [
     maintenanceRate: 1500,
   },
   {
-    id: 'TH-002',
+    id: 'TH-2',
     name: 'Pavonis',
     company: 'Titan Haul',
     level: 2,
@@ -152,7 +152,7 @@ const titanHaulShips: Ship[] = [
     maintenanceRate: 2000,
   },
   {
-    id: 'TH-003',
+    id: 'TH-3',
     name: 'Arsia',
     company: 'Titan Haul',
     level: 3,
@@ -164,7 +164,7 @@ const titanHaulShips: Ship[] = [
     maintenanceRate: 3000,
   },
   {
-    id: 'TH-004',
+    id: 'TH-4',
     name: 'Ascraeus',
     company: 'Titan Haul',
     level: 4,
@@ -176,7 +176,7 @@ const titanHaulShips: Ship[] = [
     maintenanceRate: 4000,
   },
   {
-    id: 'TH-005',
+    id: 'TH-5',
     name: 'Olympus',
     company: 'Titan Haul',
     level: 5,
@@ -191,7 +191,7 @@ const titanHaulShips: Ship[] = [
 
 const whiteDwarfShips: Ship[] = [
   {
-    id: 'WD-001',
+    id: 'WD-1',
     name: 'Proto',
     company: 'White Dwarf Co.',
     level: 1,
@@ -203,7 +203,7 @@ const whiteDwarfShips: Ship[] = [
     maintenanceRate: 750,
   },
   {
-    id: 'WD-002',
+    id: 'WD-2',
     name: 'Main',
     company: 'White Dwarf Co.',
     level: 2,
@@ -215,7 +215,7 @@ const whiteDwarfShips: Ship[] = [
     maintenanceRate: 1000,
   },
   {
-    id: 'WD-003',
+    id: 'WD-3',
     name: 'Giant',
     company: 'White Dwarf Co.',
     level: 3,
@@ -227,7 +227,7 @@ const whiteDwarfShips: Ship[] = [
     maintenanceRate: 1250,
   },
   {
-    id: 'WD-004',
+    id: 'WD-4',
     name: 'Nova',
     company: 'White Dwarf Co.',
     level: 4,
@@ -239,7 +239,7 @@ const whiteDwarfShips: Ship[] = [
     maintenanceRate: 1500,
   },
   {
-    id: 'WD-005',
+    id: 'WD-5',
     name: 'Neutron',
     company: 'White Dwarf Co.',
     level: 5,
@@ -254,7 +254,7 @@ const whiteDwarfShips: Ship[] = [
 
 const galaxysFinestShips: Ship[] = [
   {
-    id: 'GF-001',
+    id: 'GF-1',
     name: 'Orbiter S',
     company: "Galaxy's Finest",
     level: 1,
@@ -266,7 +266,7 @@ const galaxysFinestShips: Ship[] = [
     maintenanceRate: 10000,
   },
   {
-    id: 'GF-002',
+    id: 'GF-2',
     name: 'Orbiter P',
     company: "Galaxy's Finest",
     level: 2,
@@ -278,7 +278,7 @@ const galaxysFinestShips: Ship[] = [
     maintenanceRate: 25000,
   },
   {
-    id: 'GF-003',
+    id: 'GF-3',
     name: 'Orbiter D',
     company: "Galaxy's Finest",
     level: 3,
@@ -290,7 +290,7 @@ const galaxysFinestShips: Ship[] = [
     maintenanceRate: 50000,
   },
   {
-    id: 'GF-004',
+    id: 'GF-4',
     name: 'Orbiter F',
     company: "Galaxy's Finest",
     level: 4,
@@ -302,7 +302,7 @@ const galaxysFinestShips: Ship[] = [
     maintenanceRate: 75000,
   },
   {
-    id: 'GF-005',
+    id: 'GF-5',
     name: 'Orbiter G',
     company: "Galaxy's Finest",
     level: 5,
@@ -317,7 +317,7 @@ const galaxysFinestShips: Ship[] = [
 
 const horizonAutomataShips: Ship[] = [
   {
-    id: 'HA-001',
+    id: 'HA-1',
     name: 'Horizon 1',
     company: 'Horizon Automata',
     level: 1,
@@ -329,7 +329,7 @@ const horizonAutomataShips: Ship[] = [
     maintenanceRate: 1000,
   },
   {
-    id: 'HA-002',
+    id: 'HA-2',
     name: 'Horizon 2',
     company: 'Horizon Automata',
     level: 2,
@@ -341,7 +341,7 @@ const horizonAutomataShips: Ship[] = [
     maintenanceRate: 1500,
   },
   {
-    id: 'HA-003',
+    id: 'HA-3',
     name: 'Horizon 3',
     company: 'Horizon Automata',
     level: 3,
@@ -353,7 +353,7 @@ const horizonAutomataShips: Ship[] = [
     maintenanceRate: 2000,
   },
   {
-    id: 'HA-004',
+    id: 'HA-4',
     name: 'Horizon 4',
     company: 'Horizon Automata',
     level: 4,
@@ -365,7 +365,7 @@ const horizonAutomataShips: Ship[] = [
     maintenanceRate: 3000,
   },
   {
-    id: 'HA-005',
+    id: 'HA-5',
     name: 'Horizon 5',
     company: 'Horizon Automata',
     level: 5,
@@ -377,3 +377,36 @@ const horizonAutomataShips: Ship[] = [
     maintenanceRate: 5000,
   },
 ];
+
+export const SHIPS_MAP = {
+  'KI-1': keplerShips[0],
+  'KI-2': keplerShips[1],
+  'KI-3': keplerShips[2],
+  'KI-4': keplerShips[3],
+  'KI-5': keplerShips[4],
+  'RD-1': redshiftShips[0],
+  'RD-2': redshiftShips[1],
+  'RD-3': redshiftShips[2],
+  'RD-4': redshiftShips[3],
+  'RD-5': redshiftShips[4],
+  'TH-1': titanHaulShips[0],
+  'TH-2': titanHaulShips[1],
+  'TH-3': titanHaulShips[2],
+  'TH-4': titanHaulShips[3],
+  'TH-5': titanHaulShips[4],
+  'WD-1': whiteDwarfShips[0],
+  'WD-2': whiteDwarfShips[1],
+  'WD-3': whiteDwarfShips[2],
+  'WD-4': whiteDwarfShips[3],
+  'WD-5': whiteDwarfShips[4],
+  'GF-1': galaxysFinestShips[0],
+  'GF-2': galaxysFinestShips[1],
+  'GF-3': galaxysFinestShips[2],
+  'GF-4': galaxysFinestShips[3],
+  'GF-5': galaxysFinestShips[4],
+  'HA-1': horizonAutomataShips[0],
+  'HA-2': horizonAutomataShips[1],
+  'HA-3': horizonAutomataShips[2],
+  'HA-4': horizonAutomataShips[3],
+  'HA-5': horizonAutomataShips[4],
+} as const;

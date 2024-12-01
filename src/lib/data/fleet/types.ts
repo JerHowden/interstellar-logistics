@@ -8,12 +8,14 @@ type Company =
   | "Galaxy's Finest"
   | 'Horizon Automata';
 type CompanyID = 'KI' | 'RD' | 'TH' | 'WD' | 'GF' | 'HA';
+type ShipLevel = 1 | 2 | 3 | 4 | 5;
+export type ShipID = `${CompanyID}-${ShipLevel}`;
 
 export type Ship = {
-  id: string;
+  id: ShipID;
   name: string;
   company: Company;
-  level: 1 | 2 | 3 | 4 | 5;
+  level: ShipLevel;
   speed: number; // light years per second (ly/s) 1-100
   crew: number; // number of crew needed to operate
   capacity: number; // weight (t)
@@ -23,6 +25,7 @@ export type Ship = {
 };
 
 export type ShipOwned = {
+  number: number; // 0 - inf, ship number based on acquisition
   ship: Ship;
   name: string;
   fuelPercentage: number; // percentage 0-100
