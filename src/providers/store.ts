@@ -1,7 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
+import fleet from '@/modules/assets/fleet/reducer';
+import balance from '@/modules/infrastructure/balance/reducer';
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    balance,
+    fleet,
+  },
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

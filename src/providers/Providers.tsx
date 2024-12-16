@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Provider } from 'react-redux';
+import { Provider as ReduxProvider } from 'react-redux';
 import { MantineProvider } from '@mantine/core';
 import { store } from './store';
 import { theme } from './theme';
@@ -9,8 +9,8 @@ type ProvidersProps = {
 };
 export function Providers({ children }: ProvidersProps) {
   return (
-    <Provider store={store}>
+    <ReduxProvider store={store}>
       <MantineProvider theme={theme}>{children}</MantineProvider>
-    </Provider>
+    </ReduxProvider>
   );
 }

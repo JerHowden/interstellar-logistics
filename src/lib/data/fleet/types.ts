@@ -25,7 +25,7 @@ export type Ship = {
 };
 
 export type ShipOwned = {
-  number: number; // 0 - inf, ship number based on acquisition
+  id: number; // 0 - inf, ship number based on acquisition
   ship: Ship;
   name: string;
   fuelPercentage: number; // percentage 0-100

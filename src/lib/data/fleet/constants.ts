@@ -3,7 +3,7 @@ import { Ship } from './types';
 const keplerShips: Ship[] = [
   {
     id: 'KI-1',
-    name: 'Kepler Pioneer',
+    name: 'Pioneer',
     company: 'Kepler Industries',
     level: 1,
     speed: 1,
@@ -15,7 +15,7 @@ const keplerShips: Ship[] = [
   },
   {
     id: 'KI-2',
-    name: 'Kepler Explorer',
+    name: 'Explorer',
     company: 'Kepler Industries',
     level: 2,
     speed: 1.5,
@@ -27,7 +27,7 @@ const keplerShips: Ship[] = [
   },
   {
     id: 'KI-3',
-    name: 'Kepler Pathfinder',
+    name: 'Pathfinder',
     company: 'Kepler Industries',
     level: 3,
     speed: 2,
@@ -39,7 +39,7 @@ const keplerShips: Ship[] = [
   },
   {
     id: 'KI-4',
-    name: 'Kepler Outrider',
+    name: 'Outrider',
     company: 'Kepler Industries',
     level: 4,
     speed: 3,
@@ -51,7 +51,7 @@ const keplerShips: Ship[] = [
   },
   {
     id: 'KI-5',
-    name: 'Kepler Voyager',
+    name: 'Voyager',
     company: 'Kepler Industries',
     level: 5,
     speed: 5,
