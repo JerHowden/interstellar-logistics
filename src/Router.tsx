@@ -5,6 +5,7 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import { ProvidedApp } from './components/App';
+import { FleetPage } from './pages/Fleet.page';
 import { HomePage } from './pages/Home.page';
 
 const router = createBrowserRouter(
@@ -19,7 +20,7 @@ const router = createBrowserRouter(
       <Route path="/employees">
         <Route path=":employee-id" />
       </Route>
-      <Route path="/fleet">
+      <Route path="/fleet" element={<FleetPage />}>
         <Route path=":ship-id" />
       </Route>
       <Route path="/procurement">

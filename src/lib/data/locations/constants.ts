@@ -12,6 +12,8 @@ export const BodiesBySystem: CelestialSystemBodyRanges = {
   nebula: {},
   'black-hole': {},
   'rogue-planet': {
+    'rocky-planet': { range: [0, 1], lambda: 1 },
+    'gas-planet': { range: [0, 1], lambda: 1 },
     moon: { range: [0, 12], lambda: 1 },
   },
 };

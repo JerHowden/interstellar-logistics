@@ -16,8 +16,16 @@ export type CelestialBodyRanges = Partial<Record<CelestialBody, CelestialBodyPro
 export type CelestialSystemType = 'solar-system' | 'nebula' | 'rogue-planet' | 'black-hole';
 export type CelestialSystemBodyRanges = Record<CelestialSystemType, CelestialBodyRanges>;
 
-type Location = {
+export type Location = {
+  id: string;
   name: string;
   body: CelestialBody;
+  gravity: number; // (m/s²)
   resources: Record<Partial<Material>, number>;
+};
+
+export type CelestialSystem = {
+  name: string;
+  type: CelestialSystemType;
+  locations: Location[];
 };

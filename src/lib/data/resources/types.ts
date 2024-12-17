@@ -72,5 +72,5 @@ export type MaterialData = {
   state: StateOfMatter;
   abundance: Abundance;
   form: ResourceForm;
-  weight: number; // (t)
+  weight: number; // (kg)
 };

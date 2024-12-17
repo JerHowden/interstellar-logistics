@@ -422,7 +422,7 @@ export const materialManufacturedData: Record<MaterialManufactured, MaterialData
     state: 'solid',
     abundance: 'rare',
     form: 'manufactured',
-    weight: 2000000,
+    weight: 200000, // ~2e6 raw
   },
   'ftl engine': {
     name: 'FTL Engine',
@@ -431,7 +431,7 @@ export const materialManufacturedData: Record<MaterialManufactured, MaterialData
     state: 'solid',
     abundance: 'rare',
     form: 'manufactured',
-    weight: 2000000,
+    weight: 10000, // ~2e6 raw
   },
   'life support system': {
     name: 'Life Support System',

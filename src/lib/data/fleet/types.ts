@@ -16,12 +16,25 @@ export type Ship = {
   name: string;
   company: Company;
   level: ShipLevel;
-  speed: number; // light years per second (ly/s) 1-100
+  speed: number; // light years per second (ly/s) 1-100 determined by warp drive
   crew: number; // number of crew needed to operate
+  mass: number; // weight (t)
   capacity: number; // weight (t)
   tank: number; // fuel capacity (t)
-  efficiency: number; // light years per metric ton of fuel (ly/t)
   maintenanceRate: number; // cost of maintenance per light year travelled ($/ly)
+  cost: number; // cost of purchasing the ship ($)
+};
+
+type Cargo = {
+  material: Material;
+  amount: number;
+};
+
+type Delivery = {
+  originLocation: string; // location id of the ship
+  destinationLocation: string; // location id of the destination
+  originTs: number; // timestamp of delivery start
+  destinationTs: number; // timestamp of delivery end
 };
 
 export type ShipOwned = {
@@ -29,5 +42,8 @@ export type ShipOwned = {
   ship: Ship;
   name: string;
   fuelPercentage: number; // percentage 0-100
-  cargo: Map<Material, number>; // ES6 Map
+  cargo: Cargo[]; // list of cargo items
+  location: string; // location id of the ship
+  status: 'idle' | 'departing' | 'arriving' | 'in transit';
+  delivery: Delivery;
 };
