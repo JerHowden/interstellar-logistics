@@ -4,10 +4,9 @@ type Company =
   | 'Kepler Industries'
   | 'Redshift Dynamics'
   | 'Titan Haul'
-  | 'White Dwarf Co.'
   | "Galaxy's Finest"
   | 'Horizon Automata';
-type CompanyID = 'KI' | 'RD' | 'TH' | 'WD' | 'GF' | 'HA';
+type CompanyID = 'KI' | 'RD' | 'TH' | 'GF' | 'HA';
 type ShipLevel = 1 | 2 | 3 | 4 | 5;
 export type ShipID = `${CompanyID}-${ShipLevel}`;
 
@@ -20,7 +19,7 @@ export type Ship = {
   crew: number; // number of crew needed to operate
   mass: number; // weight (t)
   capacity: number; // weight (t)
-  tank: number; // fuel capacity (t)
+  tank: number; // fuel capacity for ftl travel, 1 ton of fuel = 1 ton of mass traveled per light year (t)
   maintenanceRate: number; // cost of maintenance per light year travelled ($/ly)
   cost: number; // cost of purchasing the ship ($)
 };
@@ -28,6 +27,7 @@ export type Ship = {
 type Cargo = {
   material: Material;
   amount: number;
+  destination: string; // location id of the destination
 };
 
 type Delivery = {
@@ -44,6 +44,6 @@ export type ShipOwned = {
   fuelPercentage: number; // percentage 0-100
   cargo: Cargo[]; // list of cargo items
   location: string; // location id of the ship
-  status: 'idle' | 'departing' | 'arriving' | 'in transit';
+  status: 'docked' | 'in transit';
   delivery: Delivery;
 };

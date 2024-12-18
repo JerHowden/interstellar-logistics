@@ -1,6 +1,19 @@
-import { MaterialData, MaterialManufactured, MaterialProcessed, MaterialRaw } from './types';
+import {
+  Abundance,
+  MaterialData,
+  MaterialManufactured,
+  MaterialProcessed,
+  MaterialRaw,
+} from './types';
 
-export const MaterialsRaw: Record<MaterialRaw, MaterialData> = {
+export const ABUNDANCE_FACTORS: Record<Abundance, [number, number]> = {
+  // abundance: [scarce, moderate, abundant]
+  common: [0.1, 0.4],
+  uncommon: [0.2, 0.8],
+  rare: [0.6, 0.9],
+};
+
+export const MATERIALS_RAW: Record<MaterialRaw, MaterialData> = {
   aggregate: {
     name: 'Aggregate',
     description: 'Raw mixture of minerals or materials used in concrete production.',
@@ -220,7 +233,7 @@ export const MaterialsRaw: Record<MaterialRaw, MaterialData> = {
   },
 };
 
-export const materialProcessedData: Record<MaterialProcessed, MaterialData> = {
+export const MATERIALS_PROCESSED: Record<MaterialProcessed, MaterialData> = {
   'alloyed metal': {
     name: 'Alloyed Metal',
     description: 'Metal created by combining two or more elements, often for enhanced properties.',
@@ -394,7 +407,7 @@ export const materialProcessedData: Record<MaterialProcessed, MaterialData> = {
   },
 };
 
-export const materialManufacturedData: Record<MaterialManufactured, MaterialData> = {
+export const MATERIALS_MANUFACTURED: Record<MaterialManufactured, MaterialData> = {
   'artificial ecosystem generator': {
     name: 'Artificial Ecosystem Generator',
     description: 'Systems designed to create self-sustaining ecosystems for life support.',

@@ -1,14 +1,5 @@
 import { Ship } from './types';
 
-// 10000 MJ in 1 metric ton of rocket fuel
-// total MJ for delivery capability is 10000 * tank * efficiency
-// rocket dry mass = mass + filled capacity
-// rocket total mass = mass + filled capacity + filled tank
-
-// rocket must reach escape velocity before going warp speed
-
-// escape velocity (v) = 11.2 km/s
-
 const keplerShips: Ship[] = [
   {
     id: 'KI-1',
@@ -77,7 +68,6 @@ const keplerShips: Ship[] = [
   },
 ];
 
-// mostly fuel, smaller payload, can handle high gravity
 const redshiftShips: Ship[] = [
   {
     id: 'RD-1',
@@ -88,7 +78,7 @@ const redshiftShips: Ship[] = [
     crew: 4,
     mass: 25,
     capacity: 10,
-    tank: 1000,
+    tank: 100,
     maintenanceRate: 2000,
     cost: 200e3,
   },
@@ -101,7 +91,7 @@ const redshiftShips: Ship[] = [
     crew: 6,
     mass: 50,
     capacity: 20,
-    tank: 2000,
+    tank: 200,
     maintenanceRate: 3000,
     cost: 600e3,
   },
@@ -114,7 +104,7 @@ const redshiftShips: Ship[] = [
     crew: 8,
     mass: 75,
     capacity: 30,
-    tank: 3000,
+    tank: 300,
     maintenanceRate: 4000,
     cost: 1.2e6,
   },
@@ -127,7 +117,7 @@ const redshiftShips: Ship[] = [
     crew: 10,
     mass: 100,
     capacity: 40,
-    tank: 4000,
+    tank: 400,
     maintenanceRate: 6000,
     cost: 2.4e6,
   },
@@ -140,24 +130,23 @@ const redshiftShips: Ship[] = [
     crew: 12,
     mass: 125,
     capacity: 50,
-    tank: 5000,
+    tank: 500,
     maintenanceRate: 8000,
     cost: 4e6,
   },
 ];
 
-// mostly capacity, larger payload, cannot handle high gravity
 const titanHaulShips: Ship[] = [
   {
     id: 'TH-1',
     name: 'Elysium',
     company: 'Titan Haul',
     level: 1,
-    speed: 0.5,
+    speed: 0.25,
     crew: 6,
     mass: 300,
     capacity: 200,
-    tank: 250,
+    tank: 6000,
     maintenanceRate: 1500,
     cost: 150e3,
   },
@@ -166,11 +155,11 @@ const titanHaulShips: Ship[] = [
     name: 'Pavonis',
     company: 'Titan Haul',
     level: 2,
-    speed: 0.75,
+    speed: 0.5,
     crew: 10,
     mass: 600,
     capacity: 400,
-    tank: 500,
+    tank: 12000,
     maintenanceRate: 2000,
     cost: 400e3,
   },
@@ -179,11 +168,11 @@ const titanHaulShips: Ship[] = [
     name: 'Arsia',
     company: 'Titan Haul',
     level: 3,
-    speed: 1,
+    speed: 0.75,
     crew: 15,
     mass: 900,
     capacity: 600,
-    tank: 750,
+    tank: 18000,
     maintenanceRate: 3000,
     cost: 900e3,
   },
@@ -192,11 +181,11 @@ const titanHaulShips: Ship[] = [
     name: 'Ascraeus',
     company: 'Titan Haul',
     level: 4,
-    speed: 1.5,
+    speed: 1,
     crew: 20,
     mass: 1200,
     capacity: 800,
-    tank: 1000,
+    tank: 24000,
     maintenanceRate: 4000,
     cost: 1.6e6,
   },
@@ -205,17 +194,16 @@ const titanHaulShips: Ship[] = [
     name: 'Olympus',
     company: 'Titan Haul',
     level: 5,
-    speed: 2,
+    speed: 1.5,
     crew: 25,
     mass: 1500,
     capacity: 1200,
-    tank: 1250,
+    tank: 32000,
     maintenanceRate: 6000,
     cost: 3e6,
   },
 ];
 
-// more efficient version of kepler ships
 /* const whiteDwarfShips: Ship[] = [
   {
     id: 'WD-1',
@@ -284,7 +272,6 @@ const titanHaulShips: Ship[] = [
   },
 ]; */
 
-// big ass ships
 const galaxysFinestShips: Ship[] = [
   {
     id: 'GF-1',
@@ -295,7 +282,7 @@ const galaxysFinestShips: Ship[] = [
     crew: 100,
     mass: 1500,
     capacity: 250,
-    tank: 10000,
+    tank: 50000,
     maintenanceRate: 10000,
     cost: 1e6,
   },
@@ -308,7 +295,7 @@ const galaxysFinestShips: Ship[] = [
     crew: 150,
     mass: 2250,
     capacity: 375,
-    tank: 15000,
+    tank: 75000,
     maintenanceRate: 25000,
     cost: 5e6,
   },
@@ -321,7 +308,7 @@ const galaxysFinestShips: Ship[] = [
     crew: 200,
     mass: 3000,
     capacity: 500,
-    tank: 20000,
+    tank: 100000,
     maintenanceRate: 50000,
     cost: 15e6,
   },
@@ -334,7 +321,7 @@ const galaxysFinestShips: Ship[] = [
     crew: 250,
     mass: 3750,
     capacity: 625,
-    tank: 25000,
+    tank: 125000,
     maintenanceRate: 75000,
     cost: 30e6,
   },
@@ -347,7 +334,7 @@ const galaxysFinestShips: Ship[] = [
     crew: 300,
     mass: 5000,
     capacity: 750,
-    tank: 35000,
+    tank: 200000,
     maintenanceRate: 100000,
     cost: 50e6,
   },
@@ -357,7 +344,7 @@ const galaxysFinestShips: Ship[] = [
 const horizonAutomataShips: Ship[] = [
   {
     id: 'HA-1',
-    name: 'Horizon 1',
+    name: 'Horizon Mk I',
     company: 'Horizon Automata',
     level: 1,
     speed: 1.5,
@@ -370,7 +357,7 @@ const horizonAutomataShips: Ship[] = [
   },
   {
     id: 'HA-2',
-    name: 'Horizon 2',
+    name: 'Horizon Mk II',
     company: 'Horizon Automata',
     level: 2,
     speed: 2,
@@ -383,7 +370,7 @@ const horizonAutomataShips: Ship[] = [
   },
   {
     id: 'HA-3',
-    name: 'Horizon 3',
+    name: 'Horizon Mk III',
     company: 'Horizon Automata',
     level: 3,
     speed: 3,
@@ -396,7 +383,7 @@ const horizonAutomataShips: Ship[] = [
   },
   {
     id: 'HA-4',
-    name: 'Horizon 4',
+    name: 'Horizon Mk IV',
     company: 'Horizon Automata',
     level: 4,
     speed: 4,
@@ -409,7 +396,7 @@ const horizonAutomataShips: Ship[] = [
   },
   {
     id: 'HA-5',
-    name: 'Horizon 5',
+    name: 'Horizon Mk V',
     company: 'Horizon Automata',
     level: 5,
     speed: 5,
