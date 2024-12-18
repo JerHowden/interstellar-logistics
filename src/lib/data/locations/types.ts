@@ -42,3 +42,9 @@ export type CelestialSystem = {
   discovered: boolean;
   locations: Location[];
 };
+
+export type MapLink = {
+  source: string;
+  target: string;
+  value: number;
+};

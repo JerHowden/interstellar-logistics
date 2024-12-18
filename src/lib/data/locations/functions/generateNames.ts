@@ -38,7 +38,11 @@ export function generateName(type: CelestialSystemType | 'comet'): string {
     case 'rogue-planet':
       return `${getRandomRangeNumber(1000, 10000)}${num < 0.5 ? '-' : '+'}${getRandomRangeNumber(1000, 10000)}`;
     case 'comet':
-      return `${gre(randomNames)}'s Comet`;
+      if (num < 0.3) {
+        return `${gre(randomNames)}'s Comet`;
+      } else {
+        return `${gre(greekLetters)}-${getRandomRangeNumber(1, 10)} Comet`;
+      }
     default:
       return 'Unknown Celestial System';
   }

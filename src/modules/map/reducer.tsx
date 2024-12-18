@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { CelestialBody, Delivery } from './types';
+import { CelestialSystem, Location, MapLink } from '@/lib/data/locations';
 
 type MapState = {
-  nodes: MapNode[];
+  nodes: CelestialSystem[];
   links: MapLink[];
   selectedNodeId: string | null;
   selectedLinkId: string | null;

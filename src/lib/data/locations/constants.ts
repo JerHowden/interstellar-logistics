@@ -1,4 +1,5 @@
 import { MaterialRaw } from '../resources';
+import { DistributionVariables } from '../types';
 import { CelestialBody, CelestialSystemBodyRanges } from './types';
 
 export const BODIES_BY_SYSTEM: CelestialSystemBodyRanges = {
@@ -41,6 +42,17 @@ export const BODIES_BY_SYSTEM: CelestialSystemBodyRanges = {
       range: [0, 12],
       lambda: 1,
     },
+  },
+} as const;
+
+export const MOONS_BY_BODY: Record<'rocky-planet' | 'gas-planet', DistributionVariables> = {
+  'rocky-planet': {
+    range: [0, 3],
+    lambda: 0,
+  },
+  'gas-planet': {
+    range: [0, 50],
+    lambda: 4,
   },
 };
 
@@ -91,4 +103,4 @@ export const MATERIALS_BY_BODY: Record<CelestialBody, Partial<Record<MaterialRaw
   // Black Hole Bodies
   'black-hole': {},
   'event-horizon': { antimatter: 0.1 },
-};
+} as const;

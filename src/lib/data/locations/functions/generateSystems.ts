@@ -22,19 +22,19 @@ function generateSystemLocations(type: CelestialSystemType, systemName: string):
     locationCount.set('gas-planet', poisson(bodies['gas-planet']));
     locationCount.set('comet', exponential(bodies['comet']));
     locationCount.set('asteroid-belt', poisson(bodies['asteroid-belt']));
-    return generateBodyLocations(locationCount, systemName);
+    return generateBodyLocations(locationCount, type, systemName);
   } else if (type === 'nebula') {
     const bodies = BODIES_BY_SYSTEM.nebula;
     const locationCount = new Map<NebulaBody, number>();
     locationCount.set('cloud', poisson(bodies['cloud']));
     locationCount.set('protostar-nursery', poisson(bodies['protostar-nursery']));
     locationCount.set('neutron-star', poisson(bodies['neutron-star']));
-    return generateBodyLocations(locationCount, systemName);
+    return generateBodyLocations(locationCount, type, systemName);
   } else if (type === 'black-hole') {
     const locationCount = new Map<BlackHoleBody, number>();
     locationCount.set('black-hole', 1);
     locationCount.set('event-horizon', 1);
-    return generateBodyLocations(locationCount, systemName);
+    return generateBodyLocations(locationCount, type, systemName);
   } else if (type === 'rogue-planet') {
     const bodies = BODIES_BY_SYSTEM['rogue-planet'];
     const locationCount = new Map<RoguePlanetBody, number>();
@@ -45,7 +45,7 @@ function generateSystemLocations(type: CelestialSystemType, systemName: string):
     } else {
       locationCount.set('moon', poisson(bodies['moon']));
     }
-    return generateBodyLocations(locationCount, systemName);
+    return generateBodyLocations(locationCount, type, systemName);
   }
   return [];
 }
