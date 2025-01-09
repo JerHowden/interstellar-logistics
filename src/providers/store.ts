@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import fleet from '@/modules/assets/fleet/reducer';
 import balance from '@/modules/infrastructure/balance/reducer';
+import map from '@/modules/map/reducer';
 
 export const store = configureStore({
   reducer: {
     balance,
     fleet,
+    map,
   },
 });
 

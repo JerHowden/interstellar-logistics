@@ -12,10 +12,10 @@ export const BODIES_BY_SYSTEM: CelestialSystemBodyRanges = {
       lambda: 4,
     },
     comet: {
-      range: [10, 300],
-      lambda: 0.1,
+      range: [0, 5],
+      lambda: 0.9,
     },
-    'asteroid-belt': { range: [1, 3], lambda: 1 },
+    'asteroid-belt': { range: [0, 2], lambda: 1 },
   },
   nebula: {
     cloud: {
@@ -51,8 +51,8 @@ export const MOONS_BY_BODY: Record<'rocky-planet' | 'gas-planet', DistributionVa
     lambda: 0,
   },
   'gas-planet': {
-    range: [0, 50],
-    lambda: 4,
+    range: [0, 7],
+    lambda: 0.5,
   },
 };
 

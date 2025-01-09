@@ -123,6 +123,7 @@ function generateRockyPlanet(name: string): Location {
 
 function generateGasPlanet(name: string): Location {
   const moonCount = exponential(MOONS_BY_BODY['gas-planet']);
+  console.log({ moonCount });
   const moons: Location[] = [];
   for (let i = 0; i < moonCount; i++) {
     moons.push(generateMoon(`${name}-${MOON_LETTERS[i]}`));

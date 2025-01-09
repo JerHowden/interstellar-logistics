@@ -1,4 +1,4 @@
-import { Material, MaterialRaw } from '../resources/types';
+import { MaterialRaw } from '../resources';
 import { DistributionVariables } from '../types';
 
 export type SolarSystemBody =
@@ -27,7 +27,7 @@ export type CelestialSystemBodyRanges = {
 };
 
 export type Location = {
-  id: string;
+  id: string; // uuid
   name: string;
   body: CelestialBody;
   resources: Record<Partial<MaterialRaw>, 'abundant' | 'moderate' | 'scarce'>;
@@ -36,10 +36,10 @@ export type Location = {
 };
 
 export type CelestialSystem = {
-  id: string;
+  id: string; // uuid
   name: string;
   type: CelestialSystemType;
-  discovered: boolean;
+  unlocked: boolean;
   locations: Location[];
 };
 
@@ -48,3 +48,17 @@ export type MapLink = {
   target: string;
   value: number;
 };
+
+export type MapNode = {
+  id: string; // CelestialSystem id or Location id
+  links: MapLink[];
+} & (
+  | {
+      type: 'celestial-system';
+      data: CelestialSystem;
+    }
+  | {
+      type: 'location';
+      data: Location;
+    }
+);

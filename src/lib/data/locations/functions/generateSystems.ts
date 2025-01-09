@@ -56,7 +56,7 @@ export function generateCelestialSystem(type: CelestialSystemType): CelestialSys
     id: uuid(),
     name,
     type,
-    discovered: false,
+    unlocked: false,
     locations: generateSystemLocations(type, name),
   };
 }

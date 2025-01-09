@@ -5,6 +5,7 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import { ProvidedApp } from './components/App';
+import { DashboardPage } from './pages/Dashboard.page';
 import { FleetPage } from './pages/Fleet.page';
 import { HomePage } from './pages/Home.page';
 
@@ -13,7 +14,7 @@ const router = createBrowserRouter(
     <Route element={<ProvidedApp />}>
       <Route path="/" element={<HomePage />} />
       <Route path="/login" />
-      <Route path="/dashboard" />
+      <Route path="/dashboard" element={<DashboardPage />} />
       <Route path="/facilities">
         <Route path=":facility-id" />
       </Route>
